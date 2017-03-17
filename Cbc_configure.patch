@@ -1,0 +1,122 @@
+--- "Cbc\\configure"	2016-02-26 06:01:20.000000000 +0100
++++ "Cbc\\configure.new"	2017-03-17 21:20:09.865749600 +0100
+@@ -20883,6 +20883,7 @@
+     # need to export variable to be sure that the following pkg-config gets these values
+     coin_save_PKG_CONFIG_PATH="$PKG_CONFIG_PATH"
+     PKG_CONFIG_PATH="$COIN_PKG_CONFIG_PATH:$COIN_PKG_CONFIG_PATH_UNINSTALLED"
++    PKG_CONFIG_PATH=`echo $PKG_CONFIG_PATH | sed -e 's/:/;/g' | sed -e 's/C;/C:/g' | sed -e 's/\/c\//C:\//g'`
+     export PKG_CONFIG_PATH
+ 
+     # let pkg-config do it's magic
+@@ -21431,6 +21432,7 @@
+     # need to export variable to be sure that the following pkg-config gets these values
+     coin_save_PKG_CONFIG_PATH="$PKG_CONFIG_PATH"
+     PKG_CONFIG_PATH="$COIN_PKG_CONFIG_PATH:$COIN_PKG_CONFIG_PATH_UNINSTALLED"
++    PKG_CONFIG_PATH=`echo $PKG_CONFIG_PATH | sed -e 's/:/;/g' | sed -e 's/C;/C:/g' | sed -e 's/\/c\//C:\//g'`
+     export PKG_CONFIG_PATH
+ 
+     # let pkg-config do it's magic
+@@ -21957,6 +21959,7 @@
+     # need to export variable to be sure that the following pkg-config gets these values
+     coin_save_PKG_CONFIG_PATH="$PKG_CONFIG_PATH"
+     PKG_CONFIG_PATH="$COIN_PKG_CONFIG_PATH:$COIN_PKG_CONFIG_PATH_UNINSTALLED"
++    PKG_CONFIG_PATH=`echo $PKG_CONFIG_PATH | sed -e 's/:/;/g' | sed -e 's/C;/C:/g' | sed -e 's/\/c\//C:\//g'`
+     export PKG_CONFIG_PATH
+ 
+     # let pkg-config do it's magic
+@@ -22437,6 +22440,7 @@
+     # need to export variable to be sure that the following pkg-config gets these values
+     coin_save_PKG_CONFIG_PATH="$PKG_CONFIG_PATH"
+     PKG_CONFIG_PATH="$COIN_PKG_CONFIG_PATH:$COIN_PKG_CONFIG_PATH_UNINSTALLED"
++    PKG_CONFIG_PATH=`echo $PKG_CONFIG_PATH | sed -e 's/:/;/g' | sed -e 's/C;/C:/g' | sed -e 's/\/c\//C:\//g'`
+     export PKG_CONFIG_PATH
+ 
+     # let pkg-config do it's magic
+@@ -22917,6 +22921,7 @@
+     # need to export variable to be sure that the following pkg-config gets these values
+     coin_save_PKG_CONFIG_PATH="$PKG_CONFIG_PATH"
+     PKG_CONFIG_PATH="$COIN_PKG_CONFIG_PATH:$COIN_PKG_CONFIG_PATH_UNINSTALLED"
++    PKG_CONFIG_PATH=`echo $PKG_CONFIG_PATH | sed -e 's/:/;/g' | sed -e 's/C;/C:/g' | sed -e 's/\/c\//C:\//g'`
+     export PKG_CONFIG_PATH
+ 
+     # let pkg-config do it's magic
+@@ -23397,6 +23402,7 @@
+     # need to export variable to be sure that the following pkg-config gets these values
+     coin_save_PKG_CONFIG_PATH="$PKG_CONFIG_PATH"
+     PKG_CONFIG_PATH="$COIN_PKG_CONFIG_PATH:$COIN_PKG_CONFIG_PATH_UNINSTALLED"
++    PKG_CONFIG_PATH=`echo $PKG_CONFIG_PATH | sed -e 's/:/;/g' | sed -e 's/C;/C:/g' | sed -e 's/\/c\//C:\//g'`
+     export PKG_CONFIG_PATH
+ 
+     # let pkg-config do it's magic
+@@ -25200,6 +25206,7 @@
+     # need to export variable to be sure that the following pkg-config gets these values
+     coin_save_PKG_CONFIG_PATH="$PKG_CONFIG_PATH"
+     PKG_CONFIG_PATH="$COIN_PKG_CONFIG_PATH:$COIN_PKG_CONFIG_PATH_UNINSTALLED"
++    PKG_CONFIG_PATH=`echo $PKG_CONFIG_PATH | sed -e 's/:/;/g' | sed -e 's/C;/C:/g' | sed -e 's/\/c\//C:\//g'`
+     export PKG_CONFIG_PATH
+ 
+     # let pkg-config do it's magic
+@@ -25699,6 +25706,7 @@
+     # need to export variable to be sure that the following pkg-config gets these values
+     coin_save_PKG_CONFIG_PATH="$PKG_CONFIG_PATH"
+     PKG_CONFIG_PATH="$COIN_PKG_CONFIG_PATH:$COIN_PKG_CONFIG_PATH_UNINSTALLED"
++    PKG_CONFIG_PATH=`echo $PKG_CONFIG_PATH | sed -e 's/:/;/g' | sed -e 's/C;/C:/g' | sed -e 's/\/c\//C:\//g'`
+     export PKG_CONFIG_PATH
+ 
+     # let pkg-config do it's magic
+@@ -26201,6 +26209,7 @@
+     # need to export variable to be sure that the following pkg-config gets these values
+     coin_save_PKG_CONFIG_PATH="$PKG_CONFIG_PATH"
+     PKG_CONFIG_PATH="$COIN_PKG_CONFIG_PATH:$COIN_PKG_CONFIG_PATH_UNINSTALLED"
++    PKG_CONFIG_PATH=`echo $PKG_CONFIG_PATH | sed -e 's/:/;/g' | sed -e 's/C;/C:/g' | sed -e 's/\/c\//C:\//g'`
+     export PKG_CONFIG_PATH
+ 
+     # let pkg-config do it's magic
+@@ -26730,6 +26739,7 @@
+     # need to export variable to be sure that the following pkg-config gets these values
+     coin_save_PKG_CONFIG_PATH="$PKG_CONFIG_PATH"
+     PKG_CONFIG_PATH="$COIN_PKG_CONFIG_PATH:$COIN_PKG_CONFIG_PATH_UNINSTALLED"
++    PKG_CONFIG_PATH=`echo $PKG_CONFIG_PATH | sed -e 's/:/;/g' | sed -e 's/C;/C:/g' | sed -e 's/\/c\//C:\//g'`
+     export PKG_CONFIG_PATH
+ 
+     # let pkg-config do it's magic
+@@ -27229,6 +27239,7 @@
+     # need to export variable to be sure that the following pkg-config gets these values
+     coin_save_PKG_CONFIG_PATH="$PKG_CONFIG_PATH"
+     PKG_CONFIG_PATH="$COIN_PKG_CONFIG_PATH:$COIN_PKG_CONFIG_PATH_UNINSTALLED"
++    PKG_CONFIG_PATH=`echo $PKG_CONFIG_PATH | sed -e 's/:/;/g' | sed -e 's/C;/C:/g' | sed -e 's/\/c\//C:\//g'`
+     export PKG_CONFIG_PATH
+ 
+     # let pkg-config do it's magic
+@@ -27720,6 +27731,7 @@
+     # need to export variable to be sure that the following pkg-config gets these values
+     coin_save_PKG_CONFIG_PATH="$PKG_CONFIG_PATH"
+     PKG_CONFIG_PATH="$COIN_PKG_CONFIG_PATH:$COIN_PKG_CONFIG_PATH_UNINSTALLED"
++    PKG_CONFIG_PATH=`echo $PKG_CONFIG_PATH | sed -e 's/:/;/g' | sed -e 's/C;/C:/g' | sed -e 's/\/c\//C:\//g'`
+     export PKG_CONFIG_PATH
+ 
+     # let pkg-config do it's magic
+@@ -28230,6 +28242,7 @@
+     # need to export variable to be sure that the following pkg-config gets these values
+     coin_save_PKG_CONFIG_PATH="$PKG_CONFIG_PATH"
+     PKG_CONFIG_PATH="$COIN_PKG_CONFIG_PATH:$COIN_PKG_CONFIG_PATH_UNINSTALLED"
++    PKG_CONFIG_PATH=`echo $PKG_CONFIG_PATH | sed -e 's/:/;/g' | sed -e 's/C;/C:/g' | sed -e 's/\/c\//C:\//g'`
+     export PKG_CONFIG_PATH
+ 
+     # let pkg-config do it's magic
+@@ -28729,6 +28742,7 @@
+     # need to export variable to be sure that the following pkg-config gets these values
+     coin_save_PKG_CONFIG_PATH="$PKG_CONFIG_PATH"
+     PKG_CONFIG_PATH="$COIN_PKG_CONFIG_PATH:$COIN_PKG_CONFIG_PATH_UNINSTALLED"
++    PKG_CONFIG_PATH=`echo $PKG_CONFIG_PATH | sed -e 's/:/;/g' | sed -e 's/C;/C:/g' | sed -e 's/\/c\//C:\//g'`
+     export PKG_CONFIG_PATH
+ 
+     # let pkg-config do it's magic
+@@ -29237,6 +29251,7 @@
+     # need to export variable to be sure that the following pkg-config gets these values
+     coin_save_PKG_CONFIG_PATH="$PKG_CONFIG_PATH"
+     PKG_CONFIG_PATH="$COIN_PKG_CONFIG_PATH:$COIN_PKG_CONFIG_PATH_UNINSTALLED"
++    PKG_CONFIG_PATH=`echo $PKG_CONFIG_PATH | sed -e 's/:/;/g' | sed -e 's/C;/C:/g' | sed -e 's/\/c\//C:\//g'`
+     export PKG_CONFIG_PATH
+ 
+     # let pkg-config do it's magic

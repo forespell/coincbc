@@ -1,5 +1,5 @@
-SET CFLAGS="%CFLAGS% -O3"
-SET CXXFLAGS="%CXXFLAGS% -O3"
+SET CFLAGS=%CFLAGS% -O3
+SET CXXFLAGS=%CXXFLAGS% -O3
 SET CC=gcc
 SET CXX=g++
 
@@ -17,8 +17,8 @@ bash configure  ^
   --with-blas-lib=%WITH_BLAS_LIB% ^
   --with-lapack-lib=%WITH_LAPACK_LIB% ^
   --enable-coinutils-threads ^
-  --enable-cbc-parallel ^
-  || { cat config.log; exit 1; }
+  --enable-cbc-parallel
+
 make
 
 REM if [ "${UNAME}" == "Linux" ]; then
