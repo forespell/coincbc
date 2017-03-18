@@ -9,6 +9,8 @@ SET WITH_LAPACK_LIB="-L%PREFIX%/Library/bin -Wl,--no-as-needed -lmkl_rt -lpthrea
 
 ls
 
+REM Can unfortunately only create static libraries, even with --disable-static --enable-shared.
+REM See also http://stackoverflow.com/questions/14635871/
 bash configure ^
   --build=x86_64-w64-mingw32 ^
   --host=x86_64-w64-mingw32 ^

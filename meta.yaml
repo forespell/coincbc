@@ -4,7 +4,7 @@
 {% elif osx %}
     {% set libext = ".dylib" %}
 {% else %}
-    {% set libext = ".dll" %}
+    {% set libext = ".a" %} # Static, see bld.bat.
 {% endif %}
 
 {% set variant = "mkl" %}
@@ -30,11 +30,9 @@ requirements:
     - m2-make # [win]
     - m2w64-toolchain # [win]
     - gcc # [not win]
-    - blas 1.0 {{ variant }}
     - mkl
   run:
     - libgcc # [not win]
-    - blas 1.0 {{ variant }}
     - mkl
 
 test:
@@ -61,3 +59,5 @@ extra:
     - gidden
     - whart222
     - jjhelmus
+    - lsorber
+    - mathieu1
