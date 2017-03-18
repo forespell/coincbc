@@ -33,7 +33,7 @@ requirements:
     - mkl
   run:
     - libgcc # [not win]
-    - mkl
+    - mkl # [not win]
 
 test:
   commands:
