@@ -18,12 +18,6 @@ source:
   fn: Cbc-{{ version }}.tgz
   url: http://www.coin-or.org/download/source/Cbc/Cbc-{{ version }}.tgz
   sha256: ff6860400a1390170f9cb19fab6f21c1997138d285b5f225be04c4642c9a7bea
-  patches:
-    - Cbc_configure.patch # [win]
-    - Cgl_configure.patch # [win]
-    - Clp_configure.patch # [win]
-    - CoinUtils_configure.patch # [win]
-    - Osi_configure.patch # [win]
 
 build:
   number: 1
