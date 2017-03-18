@@ -5,8 +5,11 @@ SET CXX=g++
 
 REM SET WITH_BLAS_LIB="-L%PREFIX%/lib -lblas"
 REM SET WITH_LAPACK_LIB="-L%PREFIX%/lib -llapack"
+
 SET WITH_BLAS_LIB="-L%PREFIX%\Library\bin -lmkl_rt -lpthread -lm -ldl"
 SET WITH_LAPACK_LIB="-L%PREFIX%\Library\bin -lmkl_rt -lpthread -lm -ldl"
+SET WITH_BLAS_LIB=%WITH_BLAS_LIB:\=/%
+SET WITH_LAPACK_LIB=%WITH_LAPACK_LIB:\=/%
 
 ls
 
@@ -16,7 +19,6 @@ bash configure  ^
   --exec-prefix="%PREFIX%" ^
   --with-blas-lib=%WITH_BLAS_LIB% ^
   --with-lapack-lib=%WITH_LAPACK_LIB% ^
-  --enable-coinutils-threads ^
   --enable-cbc-parallel
 
 make
