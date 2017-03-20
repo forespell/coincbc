@@ -22,7 +22,7 @@ source:
 build:
   number: 1
   features:
-    - blas_{{ variant }}
+    - {{ variant }}
 
 requirements:
   build:
@@ -37,16 +37,26 @@ requirements:
 
 test:
   commands:
-    - test -f "%PREFIX%/lib/libCbc{{ libext }}"
-    - test -f "%PREFIX%/lib/libCbcSolver{{ libext }}"
-    - test -f "%PREFIX%/lib/libCgl{{ libext }}"
-    - test -f "%PREFIX%/lib/libClp{{ libext }}"
-    - test -f "%PREFIX%/lib/libClpSolver{{ libext }}"
-    - test -f "%PREFIX%/lib/libCoinUtils{{ libext }}"
-    - test -f "%PREFIX%/lib/libOsi{{ libext }}"
-    - test -f "%PREFIX%/lib/libOsiCbc{{ libext }}"
-    - test -f "%PREFIX%/lib/libOsiClp{{ libext }}"
-    - test -f "%PREFIX%/lib/libOsiCommonTests{{ libext }}"
+    - test -f "${PREFIX}/lib/libCbc{{ libext }}" # [not win]
+    - test -f "${PREFIX}/lib/libCbcSolver{{ libext }}" # [not win]
+    - test -f "${PREFIX}/lib/libCgl{{ libext }}" # [not win]
+    - test -f "${PREFIX}/lib/libClp{{ libext }}" # [not win]
+    - test -f "${PREFIX}/lib/libClpSolver{{ libext }}" # [not win]
+    - test -f "${PREFIX}/lib/libCoinUtils{{ libext }}" # [not win]
+    - test -f "${PREFIX}/lib/libOsi{{ libext }}" # [not win]
+    - test -f "${PREFIX}/lib/libOsiCbc{{ libext }}" # [not win]
+    - test -f "${PREFIX}/lib/libOsiClp{{ libext }}" # [not win]
+    - test -f "${PREFIX}/lib/libOsiCommonTests{{ libext }}" # [not win]
+    - test -f "%PREFIX%/lib/libCbc{{ libext }}" # [win]
+    - test -f "%PREFIX%/lib/libCbcSolver{{ libext }}" # [win]
+    - test -f "%PREFIX%/lib/libCgl{{ libext }}" # [win]
+    - test -f "%PREFIX%/lib/libClp{{ libext }}" # [win]
+    - test -f "%PREFIX%/lib/libClpSolver{{ libext }}" # [win]
+    - test -f "%PREFIX%/lib/libCoinUtils{{ libext }}" # [win]
+    - test -f "%PREFIX%/lib/libOsi{{ libext }}" # [win]
+    - test -f "%PREFIX%/lib/libOsiCbc{{ libext }}" # [win]
+    - test -f "%PREFIX%/lib/libOsiClp{{ libext }}" # [win]
+    - test -f "%PREFIX%/lib/libOsiCommonTests{{ libext }}" # [win]
 
 about:
   home: http://www.coin-or.org/

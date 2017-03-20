@@ -19,13 +19,12 @@ WITH_LAPACK_LIB="-L${PREFIX}/lib -Wl,--no-as-needed -lmkl_rt -lpthread -lm -ldl"
 
 ls
 
-CC="${CC}" CXX="${CXX}" ./configure --prefix="${PREFIX}" --exec-prefix="${PREFIX}" \
+CC="${CC}" CXX="${CXX}" ./configure \
+  --prefix="${PREFIX}" \
+  --exec-prefix="${PREFIX}" \
   --with-blas-lib="${WITH_BLAS_LIB}" \
   --with-lapack-lib="${WITH_LAPACK_LIB}" \
   --enable-cbc-parallel \
   || { cat config.log; exit 1; }
 make -j
-if [ "${UNAME}" == "Linux" ]; then
-  make -j test
-fi
 make install
