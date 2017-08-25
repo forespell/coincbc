@@ -4,7 +4,7 @@
 {% elif osx %}
     {% set libext = ".dylib" %}
 {% else %}
-    {% set libext = ".a" %} # Static, see bld.bat.
+    {% set libext = ".a" %}
 {% endif %}
 
 {% set variant = "mkl" %}
@@ -21,8 +21,8 @@ source:
 
 build:
   number: 1
-  features:
-    - {{ variant }}
+  # features:
+  #   - {{ variant }}
 
 requirements:
   build:
@@ -32,31 +32,32 @@ requirements:
     - gcc # [not win]
     - mkl
   run:
+    #- m2w64-gcc-libs
     - libgcc # [not win]
     - mkl # [not win]
 
-test:
-  commands:
-    - test -f "${PREFIX}/lib/libCbc{{ libext }}" # [not win]
-    - test -f "${PREFIX}/lib/libCbcSolver{{ libext }}" # [not win]
-    - test -f "${PREFIX}/lib/libCgl{{ libext }}" # [not win]
-    - test -f "${PREFIX}/lib/libClp{{ libext }}" # [not win]
-    - test -f "${PREFIX}/lib/libClpSolver{{ libext }}" # [not win]
-    - test -f "${PREFIX}/lib/libCoinUtils{{ libext }}" # [not win]
-    - test -f "${PREFIX}/lib/libOsi{{ libext }}" # [not win]
-    - test -f "${PREFIX}/lib/libOsiCbc{{ libext }}" # [not win]
-    - test -f "${PREFIX}/lib/libOsiClp{{ libext }}" # [not win]
-    - test -f "${PREFIX}/lib/libOsiCommonTests{{ libext }}" # [not win]
-    - test -f "%PREFIX%/lib/libCbc{{ libext }}" # [win]
-    - test -f "%PREFIX%/lib/libCbcSolver{{ libext }}" # [win]
-    - test -f "%PREFIX%/lib/libCgl{{ libext }}" # [win]
-    - test -f "%PREFIX%/lib/libClp{{ libext }}" # [win]
-    - test -f "%PREFIX%/lib/libClpSolver{{ libext }}" # [win]
-    - test -f "%PREFIX%/lib/libCoinUtils{{ libext }}" # [win]
-    - test -f "%PREFIX%/lib/libOsi{{ libext }}" # [win]
-    - test -f "%PREFIX%/lib/libOsiCbc{{ libext }}" # [win]
-    - test -f "%PREFIX%/lib/libOsiClp{{ libext }}" # [win]
-    - test -f "%PREFIX%/lib/libOsiCommonTests{{ libext }}" # [win]
+# test:
+#   commands:
+#     - test -f "${PREFIX}/lib/libCbc{{ libext }}" # [not win]
+#     - test -f "${PREFIX}/lib/libCbcSolver{{ libext }}" # [not win]
+#     - test -f "${PREFIX}/lib/libCgl{{ libext }}" # [not win]
+#     - test -f "${PREFIX}/lib/libClp{{ libext }}" # [not win]
+#     - test -f "${PREFIX}/lib/libClpSolver{{ libext }}" # [not win]
+#     - test -f "${PREFIX}/lib/libCoinUtils{{ libext }}" # [not win]
+#     - test -f "${PREFIX}/lib/libOsi{{ libext }}" # [not win]
+#     - test -f "${PREFIX}/lib/libOsiCbc{{ libext }}" # [not win]
+#     - test -f "${PREFIX}/lib/libOsiClp{{ libext }}" # [not win]
+#     - test -f "${PREFIX}/lib/libOsiCommonTests{{ libext }}" # [not win]
+    # - test -f "%PREFIX%/lib/libCbc{{ libext }}" # [win]
+    # - test -f "%PREFIX%/lib/libCbcSolver{{ libext }}" # [win]
+    # - test -f "%PREFIX%/lib/libCgl{{ libext }}" # [win]
+    # - test -f "%PREFIX%/lib/libClp{{ libext }}" # [win]
+    # - test -f "%PREFIX%/lib/libClpSolver{{ libext }}" # [win]
+    # - test -f "%PREFIX%/lib/libCoinUtils{{ libext }}" # [win]
+    # - test -f "%PREFIX%/lib/libOsi{{ libext }}" # [win]
+    # - test -f "%PREFIX%/lib/libOsiCbc{{ libext }}" # [win]
+    # - test -f "%PREFIX%/lib/libOsiClp{{ libext }}" # [win]
+    # - test -f "%PREFIX%/lib/libOsiCommonTests{{ libext }}" # [win]
 
 about:
   home: http://www.coin-or.org/

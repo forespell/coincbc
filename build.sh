@@ -25,6 +25,10 @@ CC="${CC}" CXX="${CXX}" ./configure \
   --with-blas-lib="${WITH_BLAS_LIB}" \
   --with-lapack-lib="${WITH_LAPACK_LIB}" \
   --enable-cbc-parallel \
+  --disable-static \
+  --enable-shared \
+  --enable-dependency-linking \
   || { cat config.log; exit 1; }
+
 make -j
 make install
